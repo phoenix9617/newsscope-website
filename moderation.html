@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC Moderation & Community Guidelines — NewsScope</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: '#121826',
+                        cardBorder: '#1e293b',
+                        neonBlue: '#38bdf8',
+                        neonCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090d16; color: #f8fafc; }
+        .glow-blue { box-shadow: 0 0 25px rgba(56, 189, 248, 0.2); }
+        .glass-panel { background: rgba(18, 24, 38, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(30, 41, 59, 0.8); }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="relative w-11 h-11 rounded-xl overflow-hidden border border-cyan-500/45 glow-blue flex items-center justify-center bg-slate-900">
+                    <img src="Gemini_Generated_Image_ta5tysta5tysta5t.jpeg" alt="NewsScope Logo" class="w-full h-full object-cover">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight text-white">News<span class="text-cyan-400">Scope</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-cyan-400/80 font-semibold">newsscope.services</span>
+                </div>
+            </a>
+            <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </header>
+
+    <!-- Moderation & UGC Content -->
+    <main class="flex-grow py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto glass-panel p-8 sm:p-12 rounded-3xl border border-cyan-500/30 glow-blue space-y-8">
+            <div class="flex items-center gap-3 pb-6 border-b border-slate-800">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl flex-shrink-0">
+                    <i class="fa-solid fa-gavel"></i>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-extrabold text-white">UGC Moderation & Community Guidelines</h1>
+                    <p class="text-xs text-cyan-400 mt-1">Last Updated: November 10, 2026 • Effective Date: November 10, 2026</p>
+                </div>
+            </div>
+
+            <div class="space-y-6 text-sm text-slate-300 leading-relaxed">
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-xs text-slate-400 space-y-1">
+                    <div><strong class="text-white">Platform:</strong> NewsScope (https://newsscope.services)</div>
+                    <div><strong class="text-white">Operator:</strong> New Reach Venture</div>
+                </div>
+
+                <p>
+                    NewsScope is built to foster thoughtful, balanced, and civil public discourse around global news and current events. To ensure a safe, reliable, and constructive environment for all users, we enforce a strict, zero-tolerance approach toward abuse, harassment, and harmful content.
+                </p>
+                <p>
+                    By submitting comments, participating in discussions, voting, or otherwise interacting with user-generated features within the NewsScope mobile application or web services, you agree to comply with these Guidelines.
+                </p>
+
+                <!-- Section 1 -->
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <h2 class="text-lg font-bold text-white">1. Zero-Tolerance Policy for Abusive Content</h2>
+                    <p class="text-slate-400">NewsScope maintains an absolute zero-tolerance policy for egregious violations. Any user account found engaging in, promoting, or distributing the following categories of content will face immediate, permanent account termination and content removal without prior warning:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                        <li><strong>Child Sexual Abuse Material (CSAM) &amp; Exploitation:</strong> Any material that depicts, promotes, or facilitates the sexual abuse or exploitation of minors. All occurrences are immediately purged and reported to legal authorities, including the National Center for Missing &amp; Exploited Children (NCMEC).</li>
+                        <li><strong>Hate Speech &amp; Discrimination:</strong> Content that attacks, demeans, incites violence against, or dehumanizes individuals or groups based on race, ethnicity, national origin, religion, disability, age, sex, gender identity, or sexual orientation.</li>
+                        <li><strong>Terrorism, Violent Extremism &amp; Threat of Harm:</strong> Statements advocating violence, glorifying terrorist organizations, coordinating physical attacks, or expressing specific threats to harm individuals, public safety, or critical infrastructure.</li>
+                        <li><strong>Non-Consensual Intimate Imagery (NCII) &amp; Severe Harassment:</strong> Targeted bullying, stalking, dox activities (releasing private phone numbers, home addresses, or personal documents), or sharing explicit imagery without clear consent.</li>
+                        <li><strong>Self-Harm &amp; Suicide Encouragement:</strong> Content encouraging, instructing, or glorifying suicide, self-injury, or eating disorders.</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <h2 class="text-lg font-bold text-white">2. Prohibited Content &amp; Community Standards</h2>
+                    <p class="text-slate-400">To preserve the utility and integrity of news discussions, the following behaviors and content types are strictly prohibited:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                        <li><strong>Spam &amp; Commercial Solicitation:</strong> Posting automated promotional links, affiliate schemes, repetitive multi-thread comments, phishing URLs, or malware distribution.</li>
+                        <li><strong>Coordinated Inauthentic Behavior:</strong> Operating automated bot networks, artificial engagement rings, coordinated downvoting/upvoting campaigns, or impersonating public figures, journalists, or other users.</li>
+                        <li><strong>Deliberate Deceptive Manipulation:</strong> Fabricating quotes, altering headlines maliciously to mislead, or posting deceptive deepfakes presented as authentic factual reporting.</li>
+                        <li><strong>Profanity &amp; Vulgarity in Public Discussions:</strong> Gratuitous vulgarity, obscene slurs, or aggressive personal insults directed toward community members or contributing journalists.</li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <h2 class="text-lg font-bold text-white">3. Built-In User Protection &amp; Blocking Capabilities</h2>
+                    <p class="text-slate-400">We provide users with direct, immediate control over their experience in the NewsScope app:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                        <li><strong>User Blocking:</strong>
+                            <ul class="list-disc pl-5 mt-1 space-y-1">
+                                <li>You can block any user directly from their profile card or by tapping the three-dot action menu (⋮) on any comment they post.</li>
+                                <li>Once blocked, the restricted user's comments, discussions, and profile will be instantly hidden from your view across the application.</li>
+                                <li>Blocked users are permanently prevented from replying to your comments, mentioning your username, or interacting with your profile.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Managing Blocked Accounts:</strong> You can view, manage, and unblock accounts at any time via Profile &gt; Settings &gt; Privacy &amp; Safety &gt; Blocked Accounts.</li>
+                    </ul>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <h2 class="text-lg font-bold text-white">4. In-App Reporting Mechanisms</h2>
+                    <p class="text-slate-400">NewsScope empowers every user to flag inappropriate or policy-violating contributions quickly and discreetly:</p>
+                    <ol class="list-decimal pl-5 space-y-2 text-slate-400">
+                        <li><strong>How to Report a Comment or Post:</strong>
+                            <ul class="list-disc pl-5 mt-1 space-y-1 text-xs">
+                                <li>Tap the Menu / Options (⋮) icon located next to the specific comment or discussion item.</li>
+                                <li>Select Report Content.</li>
+                                <li>Choose the primary violation category (e.g., Harassment / Bullying, Hate Speech, Spam / Bot, Misinformation, or Violence / Illegal Acts).</li>
+                                <li>Submit the report.</li>
+                            </ul>
+                        </li>
+                        <li><strong>How to Report a User Profile:</strong>
+                            <ul class="list-disc pl-5 mt-1 space-y-1 text-xs">
+                                <li>Open the user's public profile within the app.</li>
+                                <li>Tap Report Profile from the menu and specify the reason.</li>
+                            </ul>
+                        </li>
+                        <li><strong>External / Guest Reporting:</strong>
+                            <ul class="list-disc pl-5 mt-1 space-y-1 text-xs">
+                                <li>If you encounter objectionable content and do not have an active account or app access, you can email our moderation desk directly at <a href="mailto:sean@newsscope.services" class="text-cyan-300 underline">sean@newsscope.services</a> with links or screenshots of the material.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <h2 class="text-lg font-bold text-white">5. Content Moderation &amp; Enforcement Workflow</h2>
+                    <p class="text-slate-400">NewsScope employs a hybrid moderation architecture combining automated filtering with human administrative review:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                        <li><strong>Automated Screening:</strong> Incoming user text passes through automated safety filters that detect known offensive terms, spam links, and threatening syntax before or immediately after posting.</li>
+                        <li><strong>Human Review SLA:</strong> All user-flagged items enter a prioritized administrative moderation queue. Reports are reviewed by human moderators within 24 hours.</li>
+                        <li><strong>Actionable Enforcement Measures:</strong>
+                            <ul class="list-disc pl-5 mt-1 space-y-1 text-xs">
+                                <li><strong>Content Removal:</strong> Deletion or permanent obscuring of offending comments.</li>
+                                <li><strong>Temporary Account Suspension:</strong> Restricting posting, voting, and commenting privileges for minor or first-time offenses (e.g., 24 hours to 7 days).</li>
+                                <li><strong>Permanent Account Banning:</strong> Full revocation of user account access, authentication tokens, and blacklisting of associated identifiers for severe or repeat violations.</li>
+                                <li><strong>Device &amp; IP Level Restriction:</strong> In cases of severe abuse or coordinated spam operations, underlying network access identifiers may be blocked at our firewall.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 6 -->
+                <div class="space-y-3 pt-4 border-t border-slate-800">
+                    <h2 class="text-lg font-bold text-white">6. Appeals &amp; Contact</h2>
+                    <p class="text-slate-400">If you believe your content or account was moderated or suspended in error, you may submit an appeal:</p>
+                    <ul class="list-disc pl-5 space-y-1 text-slate-400 text-xs">
+                        <li><strong>Email:</strong> <a href="mailto:sean@newsscope.services" class="text-cyan-300 underline">sean@newsscope.services</a></li>
+                        <li><strong>Subject Line:</strong> "Moderation Appeal - [Your Username]"</li>
+                        <li><strong>Required Details:</strong> Registered account email, approximate date/time of the action, and a concise explanation.</li>
+                    </ul>
+                    <p class="text-xs text-slate-400 pt-2">Appeals are reviewed by a senior administrator within 3 to 5 business days, and the decision will be communicated via email.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+        <p>© 2026 NewsScope (newsscope.services) • Operated under New Reach Venture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
