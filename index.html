@@ -56,7 +56,7 @@
             <!-- Desktop Nav Links -->
             <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
                 <a href="#features" class="hover:text-cyan-400 transition-colors">Features</a>
-                <a href="#newsletter-signup" class="hover:text-cyan-400 transition-colors">Newsletter Signup</a>
+                <a href="#newsletter-signup" class="hover:text-cyan-400 transition-colors">Newsletter Partnership</a>
                 <a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
                 <a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
                 <a href="deletion.html" class="hover:text-cyan-400 transition-colors">Data Deletion</a>
@@ -159,17 +159,21 @@
         </div>
 
         <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-cyan-500/30 glow-blue">
-            <form id="newsletterForm" onsubmit="submitNewsletterApp(event)" class="space-y-6">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                
+                <!-- Web3Forms Access Key & Subject -->
+                <input type="hidden" name="access_key" value="7dbdece0-a0e8-4ede-adfa-3906597086a9">
+                <input type="hidden" name="subject" value="New Newsletter Partnership Submission">
                 
                 <!-- Row 1: Website & Email -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-2">Newsletter Website / URL</label>
-                        <input type="url" id="nlWebsite" required placeholder="https://yournewsletter.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                        <input type="url" name="website" required placeholder="https://yournewsletter.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-2">Contact Email</label>
-                        <input type="email" id="nlEmail" required placeholder="you@yournewsletter.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                        <input type="email" name="email" required placeholder="you@yournewsletter.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
                     </div>
                 </div>
 
@@ -177,11 +181,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-2">Total Subscribers</label>
-                        <input type="number" id="nlSubscribers" required placeholder="e.g. 5000" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                        <input type="number" name="subscribers" required placeholder="e.g. 5000" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-2">Average Open Rate (%)</label>
-                        <input type="text" id="nlOpenRate" required placeholder="e.g. 42%" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                        <input type="text" name="open_rate" required placeholder="e.g. 42%" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
                     </div>
                 </div>
 
@@ -195,7 +199,7 @@
                                 <span class="text-sm font-bold text-white flex items-center gap-2">
                                     <i class="fa-solid fa-bolt text-cyan-400"></i> Monthly Sponsorship
                                 </span>
-                                <input type="radio" name="partnershipChoice" value="paid" required class="text-cyan-500 focus:ring-cyan-500 bg-slate-900 border-slate-700">
+                                <input type="radio" name="partnership_choice" value="$20/month Paid Sponsorship" required class="text-cyan-500 focus:ring-cyan-500 bg-slate-900 border-slate-700">
                             </div>
                             <span class="text-xs text-slate-400">Pay <strong class="text-cyan-300">$20 / month</strong> to secure your featured spot instantly.</span>
                         </label>
@@ -206,7 +210,7 @@
                                 <span class="text-sm font-bold text-white flex items-center gap-2">
                                     <i class="fa-solid fa-handshake text-cyan-400"></i> Cross-Promotion
                                 </span>
-                                <input type="radio" name="partnershipChoice" value="barter" required class="text-cyan-500 focus:ring-cyan-500 bg-slate-900 border-slate-700">
+                                <input type="radio" name="partnership_choice" value="Free Cross-Promotion Barter" required class="text-cyan-500 focus:ring-cyan-500 bg-slate-900 border-slate-700">
                             </div>
                             <span class="text-xs text-slate-400"><strong class="text-cyan-300">Free</strong> — Promote NewsScope in your newsletter to qualify.</span>
                         </label>
@@ -367,13 +371,6 @@
             showToast(`Thank you ${name}! Direct support inquiry sent to sean@newsscope.services.`);
             document.getElementById('supportForm').reset();
             setTimeout(closeContactModal, 1500);
-        }
-
-        function submitNewsletterApp(e) {
-            e.preventDefault();
-            const email = document.getElementById('nlEmail').value;
-            showToast(`Thank you! Application received from ${email}. We will review your metrics shortly.`);
-            document.getElementById('newsletterForm').reset();
         }
 
         function showToast(msg) {
