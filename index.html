@@ -56,7 +56,7 @@
             <!-- Desktop Nav Links -->
             <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
                 <a href="#features" class="hover:text-cyan-400 transition-colors">Features</a>
-                <a href="#how-it-works" class="hover:text-cyan-400 transition-colors">How It Works</a>
+                <a href="#newsletter-signup" class="hover:text-cyan-400 transition-colors">Newsletter Signup</a>
                 <a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
                 <a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
                 <a href="deletion.html" class="hover:text-cyan-400 transition-colors">Data Deletion</a>
@@ -148,6 +148,79 @@
         </div>
     </section>
 
+    <!-- Newsletter Sponsorship & Signup Section -->
+    <section id="newsletter-signup" class="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-extrabold mb-3">Partner With NewsScope</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Feature Your Newsletter to Our Audience</h3>
+            <p class="text-sm text-slate-400 mt-3 leading-relaxed">
+                Reach thousands of tech-forward, truth-seeking readers. Submit your newsletter details below to get featured.
+            </p>
+        </div>
+
+        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-cyan-500/30 glow-blue">
+            <form id="newsletterForm" onsubmit="submitNewsletterApp(event)" class="space-y-6">
+                
+                <!-- Row 1: Website & Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Newsletter Website / URL</label>
+                        <input type="url" id="nlWebsite" required placeholder="https://yournewsletter.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Contact Email</label>
+                        <input type="email" id="nlEmail" required placeholder="you@yournewsletter.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Row 2: Subscribers & Open Rate -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Total Subscribers</label>
+                        <input type="number" id="nlSubscribers" required placeholder="e.g. 5000" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">Average Open Rate (%)</label>
+                        <input type="text" id="nlOpenRate" required placeholder="e.g. 42%" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Row 3: Choice of Partnership -->
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-3">Select Partnership Option</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Option 1: Paid -->
+                        <label class="relative flex flex-col p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-white flex items-center gap-2">
+                                    <i class="fa-solid fa-bolt text-cyan-400"></i> Monthly Sponsorship
+                                </span>
+                                <input type="radio" name="partnershipChoice" value="paid" required class="text-cyan-500 focus:ring-cyan-500 bg-slate-900 border-slate-700">
+                            </div>
+                            <span class="text-xs text-slate-400">Pay <strong class="text-cyan-300">$20 / month</strong> to secure your featured spot instantly.</span>
+                        </label>
+
+                        <!-- Option 2: Barter / Cross-Promote -->
+                        <label class="relative flex flex-col p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 cursor-pointer transition-all">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-bold text-white flex items-center gap-2">
+                                    <i class="fa-solid fa-handshake text-cyan-400"></i> Cross-Promotion
+                                </span>
+                                <input type="radio" name="partnershipChoice" value="barter" required class="text-cyan-500 focus:ring-cyan-500 bg-slate-900 border-slate-700">
+                            </div>
+                            <span class="text-xs text-slate-400"><strong class="text-cyan-300">Free</strong> — Promote NewsScope in your newsletter to qualify.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-extrabold py-4 rounded-xl text-sm transition-all glow-blue flex items-center justify-center gap-2 mt-4">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Newsletter Partnership Application
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- Download Section -->
     <section id="download" class="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-4 text-center">
@@ -187,6 +260,7 @@
                 <h4 class="text-xs font-extrabold uppercase tracking-widest text-white mb-4">Product</h4>
                 <ul class="space-y-2.5 text-xs text-slate-400">
                     <li><a href="#features" class="hover:text-cyan-400 transition-colors">Overview</a></li>
+                    <li><a href="#newsletter-signup" class="hover:text-cyan-400 transition-colors">Newsletter Partnership</a></li>
                     <li><a href="https://play.google.com/store/apps/details?id=com.newreachventure.newsscope" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">Android Release</a></li>
                 </ul>
             </div>
@@ -293,6 +367,13 @@
             showToast(`Thank you ${name}! Direct support inquiry sent to sean@newsscope.services.`);
             document.getElementById('supportForm').reset();
             setTimeout(closeContactModal, 1500);
+        }
+
+        function submitNewsletterApp(e) {
+            e.preventDefault();
+            const email = document.getElementById('nlEmail').value;
+            showToast(`Thank you! Application received from ${email}. We will review your metrics shortly.`);
+            document.getElementById('newsletterForm').reset();
         }
 
         function showToast(msg) {
